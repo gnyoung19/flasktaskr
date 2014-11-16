@@ -7,12 +7,13 @@
 		<table>
 			<tr>
 				<form action="{{ url_for('new_task') }}" method="post">
+					{{ form.csrf_token }}
 					<td>
 						<label>Task Name:</label>
 						<input name="name" type="text">
 					</td>
 					<td>
-						<label>Due Date (mm/dd/yyyy):</label>
+						<label>Due Date (mmddyyyy):</label>
 						<input name="due_date" type="text" width="120px">
 					</td>
 					<td>
